@@ -274,18 +274,18 @@ setupCfg:
   nistComplianceMode: "off"
 
   # Provide the DB attributes
-  dbVendor:
-  dbHost:
-  dbPort:
-  dbData:
-  dbDrivers:
+  dbVendor: db2
+  dbHost: 172.21.26.3
+  dbPort: 50000
+  dbData: B2BIDB
+  dbDrivers: db2jcc4.jar
   dbCreateSchema: true
   oracleUseServiceName: false
   # Values can be either true or false 
   usessl: false
   
   # Name of DB secret
-  dbSecret:
+  dbSecret: b2b-db-secret
   
   # Specify DB truststore file name including it's path relative to the mounted resources volume location, if applicable. Required when usessl is true.
   # When dbTruststoreSecret is mentioned, provide the name of the key holding the certificate data.
@@ -510,7 +510,7 @@ asi:
     
   ingress:
     internal:
-      host: "asi.itzroks-664003h6xc-io4qto-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
+      host: "asi-b2bi-prod.itzroks-664003h6xc-io4qto-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
       tls:
         enabled: true
         secretName: ""
@@ -785,7 +785,7 @@ ac:
       
   ingress:
     internal:
-      host: "ac.itzroks-664003h6xc-io4qto-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
+      host: "ac-b2bi-prod.itzroks-664003h6xc-io4qto-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
       tls:
         enabled: true
         secretName: ""
@@ -1031,7 +1031,7 @@ api:
 
   ingress:
     internal:
-      host: "api.itzroks-664003h6xc-io4qto-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
+      host: "api-b2bi-prod.itzroks-664003h6xc-io4qto-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud"
       tls:
         enabled: true
         secretName: ""
